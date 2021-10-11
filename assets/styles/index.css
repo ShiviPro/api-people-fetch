@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;800&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "El Messiri", sans-serif;
+  background: var(--pink); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--dark-blue);
+}
+
+:root {
+  --black: #34495e;
+  --white: #dff9fb;
+  --pink: #fc5c7d;
+  --dark-pink: #f84165;
+  --purple: #6a82fb;
+  --dark-blue: #273c75;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.person {
+  border: 2px solid var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1.4rem;
+  transition: transform 500ms, background-color 500ms;
+}
+
+.person:hover {
+  z-index: 2;
+  transform: scale(1.07);
+  background-color: var(--purple);
+}
+
+.info-label {
+  font-weight: 800;
+}
+
+details {
+  border: 1px dotted var(--dark-blue);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: inherit;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: var(--pink);
+  transition: background-color 300ms;
+}
+
+.delete-btn:hover {
+  background-color: var(--dark-pink);
+}
+
+nav {
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  left: 65%;
+}
+
+.sort-btn {
+  margin: 20px 10px;
+  background-color: var(--purple);
+  transition: background-color 300ms;
+}
+
+.sort-btn:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
